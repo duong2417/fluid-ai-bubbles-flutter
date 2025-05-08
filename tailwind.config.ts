@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// AI Lingo Talk custom colors
+				'ai-blue': {
+					light: '#E3F2FD',
+					DEFAULT: '#2196F3',
+					dark: '#1565C0',
+				},
+				'ai-bg': '#B3E5FC',
+				'chat-bubble': {
+					ai: '#F5F5F5',
+					user: '#2196F3',
 				}
 			},
 			borderRadius: {
@@ -84,11 +96,55 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'pulse-slow': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						opacity: '0.8',
+					},
+					'50%': {
+						transform: 'scale(1.05)',
+						opacity: '1',
+					},
+				},
+				'wave': {
+					'0%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' },
+					'100%': { transform: 'translateY(0)' },
+				},
+				'ripple': {
+					'0%': { 
+						transform: 'scale(0.95)', 
+						opacity: '0.8',
+					},
+					'50%': { 
+						transform: 'scale(1.05)', 
+						opacity: '0.3',
+					},
+					'100%': { 
+						transform: 'scale(0.95)', 
+						opacity: '0.8',
+					},
+				},
+				'blob': {
+					'0%': {
+						borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%',
+					},
+					'50%': {
+						borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%',
+					},
+					'100%': {
+						borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%',
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'wave': 'wave 2s ease-in-out infinite',
+				'ripple': 'ripple 3s infinite',
+				'blob': 'blob 8s infinite',
 			}
 		}
 	},
